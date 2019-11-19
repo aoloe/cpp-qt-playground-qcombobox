@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "../ui/ui_mainwindow.h"
 
+#include "src/comboboxproxystyle.h"
 #include <QtWidgets>
 #include <QIcon>
 
@@ -9,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+
+    ui->iconsComboBox->setStyle(new ComboBoxProxyStyle(ui->iconsComboBox->style()));
 
     ui->iconsComboBox->addItem(QIcon(":/icons/1.png"), "red");
     ui->iconsComboBox->addItem(QIcon(":/icons/2.png"), "green");

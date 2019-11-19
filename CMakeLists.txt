@@ -17,7 +17,8 @@ add_executable(sample-app
     src/main.cpp
     src/sampleapp.cpp
     src/mainwindow.cpp
-	resources/sampleapp.qrc
+    src/comboboxproxystyle.cpp
+    resources/sampleapp.qrc
 )
 
 target_link_libraries(sample-app
